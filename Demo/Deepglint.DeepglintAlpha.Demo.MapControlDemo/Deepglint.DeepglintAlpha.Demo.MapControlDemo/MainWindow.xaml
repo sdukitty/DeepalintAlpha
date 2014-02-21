@@ -1,0 +1,8 @@
+﻿<Window x:Class="Deepglint.DeepglintAlpha.Demo.MapControlDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" RenderOptions.BitmapScalingMode="NearestNeighbor" UseLayoutRounding="True">
+    <Grid x:Name="grid">
+        
+    </Grid>
+</Window>

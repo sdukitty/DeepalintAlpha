@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Deepglint.DeepglintAlpha.BaseView.MapBox.MapBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <TransformGroup x:Key="Imageview">
+                <ScaleTransform/>
+                <TranslateTransform/>
+                <RotateTransform/>
+            </TransformGroup>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" Background="Wheat"   Cursor="Hand"
+                  Margin="5" Focusable="False" x:Name="BackFrame" MinHeight="100" MinWidth="200">
+            <ContentControl  MouseLeftButtonDown="IMG1_MouseLeftButtonDown"   
+                             MouseLeftButtonUp="IMG1_MouseLeftButtonUp"
+                             MouseMove="IMG1_MouseMove"
+                             MouseWheel="IMG1_MouseWheel" >
+                <Grid>
+                    <Canvas x:Name="canvas"   RenderTransform="{StaticResource Imageview}"  >
+                    </Canvas>
+                </Grid>
+            </ContentControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
